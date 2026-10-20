@@ -365,7 +365,16 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
 }
 
+.stat span {
+  ...
+}
+
+/* ===== Secciones generales ===== */
+.section { ... }
+... (todo el bloque nuevo) ...
+
 /* ===== Computador y tablet ===== */
+@media (min-width: 900px) {/* ===== Computador y tablet ===== */
 @media (min-width: 900px) {
   .menu-btn { display: none; }
 
