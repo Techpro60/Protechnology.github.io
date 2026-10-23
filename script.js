@@ -32,7 +32,6 @@ function closeModals() {
   document.body.classList.remove("no-scroll");
 }
 
-// Abrir al tocar una tarjeta del portafolio
 document.querySelectorAll("[data-modal]").forEach((card) => {
   card.addEventListener("click", () => {
     const modal = document.getElementById(card.dataset.modal);
@@ -40,22 +39,42 @@ document.querySelectorAll("[data-modal]").forEach((card) => {
   });
 });
 
-// Cerrar con la X
 document.querySelectorAll(".modal-close").forEach((btn) => {
   btn.addEventListener("click", closeModals);
 });
 
-// Cerrar al tocar fuera de la ventana
 document.querySelectorAll(".modal").forEach((modal) => {
   modal.addEventListener("click", (e) => {
     if (e.target === modal) closeModals();
   });
 });
 
-// Cerrar con la tecla Escape
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     setMenu(false);
     closeModals();
   }
 });
+
+// ===== Formulario de contacto: envía por WhatsApp =====
+const WHATSAPP_NUMBER = "573132939781";
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const nombre = document.getElementById("f-nombre").value.trim();
+    const empresa = document.getElementById("f-empresa").value.trim();
+    const servicio = document.getElementById("f-servicio").value;
+    const mensaje = document.getElementById("f-mensaje").value.trim();
+
+    let texto = "Hola, soy " + nombre + ".";
+    if (empresa) texto += "\nEmpresa: " + empresa;
+    texto += "\nMe interesa: " + servicio;
+    if (mensaje) texto += "\nMensaje: " + mensaje;
+
+    const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(texto);
+    window.open(url, "_blank", "noopener");
+  });
+}
