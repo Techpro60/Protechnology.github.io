@@ -77,4 +77,26 @@ if (contactForm) {
     const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(texto);
     window.open(url, "_blank", "noopener");
   });
+}// ===== Animaciones al hacer scroll =====
+const revealItems = document.querySelectorAll(
+  ".section .eyebrow, .section h2, .section-sub, .about-text, .cards, .works, .courses, .values, .contact-grid, .visual, .stats"
+);
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealItems.forEach((item) => {
+    item.classList.add("reveal");
+    observer.observe(item);
+  });
 }
