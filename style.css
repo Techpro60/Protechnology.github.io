@@ -850,4 +850,45 @@ a.info-row:hover {
     grid-template-columns: 1.3fr 1fr;
     gap: 32px;
   }
+}/* ===== Nosotros ===== */
+.about-text {
+  margin-top: 16px;
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.values {
+  margin-top: 28px;
+  display: grid;
+  gap: 14px;
+}
+
+.value {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.value strong {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.value span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (min-width: 900px) {
+  .values {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 }
