@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -203,8 +203,111 @@
 
       </div>
     </section>
+
+    <section id="portafolio" class="section">
+      <p class="eyebrow">Portafolio</p>
+      <h2>Proyectos que ya generan impacto.</h2>
+      <p class="section-sub">Toca un proyecto para ver los servicios incluidos.</p>
+
+      <div class="works">
+        <button class="work" data-modal="m-video">
+          <div class="work-thumb"><span class="work-tag">Video IA</span></div>
+          <h3>Campaña publicitaria con IA</h3>
+          <p>Spot para marca de consumo masivo.</p>
+          <span class="more">Ver servicios <span class="arrow">→</span></span>
+        </button>
+
+        <button class="work" data-modal="m-redes">
+          <div class="work-thumb"><span class="work-tag">Redes</span></div>
+          <h3>Contenido viral para redes</h3>
+          <p>Serie de videos cortos para TikTok y Reels.</p>
+          <span class="more">Ver servicios <span class="arrow">→</span></span>
+        </button>
+
+        <button class="work" data-modal="m-corp">
+          <div class="work-thumb"><span class="work-tag">Corporativo</span></div>
+          <h3>Video institucional</h3>
+          <p>Presentación de empresa con producción IA.</p>
+          <span class="more">Ver servicios <span class="arrow">→</span></span>
+        </button>
+
+        <button class="work" data-modal="m-tv">
+          <div class="work-thumb"><span class="work-tag">TV</span></div>
+          <h3>Pieza para televisión</h3>
+          <p>Escenas y efectos para programa de TV.</p>
+          <span class="more">Ver servicios <span class="arrow">→</span></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== Ventanas emergentes del Portafolio ===== -->
+    <!-- Para editar: cambia los textos y los <li> de cada lista -->
+
+    <div class="modal" id="m-video" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-box">
+        <button class="modal-close" aria-label="Cerrar">✕</button>
+        <span class="work-tag">Video IA</span>
+        <h3>Campaña publicitaria con IA</h3>
+        <p>Descripción del proyecto. Escribe aquí lo que hicimos y los resultados.</p>
+        <ul class="checks">
+          <li>Servicio 1: guion y concepto</li>
+          <li>Servicio 2: producción con IA</li>
+          <li>Servicio 3: edición y entrega</li>
+          <li>Servicio 4: versiones para redes</li>
+        </ul>
+        <a href="https://wa.me/573132939781?text=Hola%2C%20me%20interesa%20una%20campa%C3%B1a%20publicitaria%20con%20IA" target="_blank" rel="noopener" class="btn btn-primary">Cotizar este servicio <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="modal" id="m-redes" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-box">
+        <button class="modal-close" aria-label="Cerrar">✕</button>
+        <span class="work-tag">Redes</span>
+        <h3>Contenido viral para redes</h3>
+        <p>Descripción del proyecto. Escribe aquí lo que hicimos y los resultados.</p>
+        <ul class="checks">
+          <li>Servicio 1: ideas y guiones</li>
+          <li>Servicio 2: videos cortos con IA</li>
+          <li>Servicio 3: calendario de publicación</li>
+          <li>Servicio 4: análisis de resultados</li>
+        </ul>
+        <a href="https://wa.me/573132939781?text=Hola%2C%20me%20interesa%20contenido%20viral%20para%20redes" target="_blank" rel="noopener" class="btn btn-primary">Cotizar este servicio <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="modal" id="m-corp" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-box">
+        <button class="modal-close" aria-label="Cerrar">✕</button>
+        <span class="work-tag">Corporativo</span>
+        <h3>Video institucional</h3>
+        <p>Descripción del proyecto. Escribe aquí lo que hicimos y los resultados.</p>
+        <ul class="checks">
+          <li>Servicio 1: guion corporativo</li>
+          <li>Servicio 2: locución y escenas con IA</li>
+          <li>Servicio 3: edición profesional</li>
+          <li>Servicio 4: entrega en varios formatos</li>
+        </ul>
+        <a href="https://wa.me/573132939781?text=Hola%2C%20me%20interesa%20un%20video%20institucional" target="_blank" rel="noopener" class="btn btn-primary">Cotizar este servicio <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="modal" id="m-tv" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-box">
+        <button class="modal-close" aria-label="Cerrar">✕</button>
+        <span class="work-tag">TV</span>
+        <h3>Pieza para televisión</h3>
+        <p>Descripción del proyecto. Escribe aquí lo que hicimos y los resultados.</p>
+        <ul class="checks">
+          <li>Servicio 1: piezas para programas</li>
+          <li>Servicio 2: efectos y escenas con IA</li>
+          <li>Servicio 3: producción ágil</li>
+          <li>Servicio 4: calidad de emisión</li>
+        </ul>
+        <a href="https://wa.me/573132939781?text=Hola%2C%20me%20interesa%20contenido%20para%20televisi%C3%B3n" target="_blank" rel="noopener" class="btn btn-primary">Cotizar este servicio <span class="arrow">→</span></a>
+      </div>
+    </div>
   </main>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
